@@ -1,0 +1,11 @@
+.btn.btn-secondary.btn-cool
+  =link_to "Party Shuffle", :action => "index"
+
+.div{style: "display:flex; flex-direction: column; padding: 80px;"}
+  - @emissions.each do |emission|
+    =link_to emission.link do
+      .div{style: "padding: 20px; border-bottom: 1px solid #dee3e6"}
+        .h4{style: "font-family: Avenir Next Bold"}=emission.title
+        .p{style: "font-family: Avenir Next Bold;"}
+          =emission.date.strftime("%d %b. %Y")
+        .p{style: "font-family: Avenir Next Regular; font-weight: 300; font-size: 1.2em"}=emission.description

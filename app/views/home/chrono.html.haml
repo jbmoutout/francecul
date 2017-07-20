@@ -1,9 +1,9 @@
 =render "header"
 
-.div{style: "display:flex; justify-content: center; padding-top: 80px"}
+.div{style: "display:flex; justify-content: center; padding-top: 40px"}
   .div.cul{style: "flex:1"}
     =link_to root_path do
-      .btn.btn-cul{style: "display:flex; justify-content: center;"}
+      .btn.btn-cul{style: "display:flex; justify-content: center; background-color: #f6f9fc"}
         .h3{style: "Avenir Next Regular; font-size: 2em; align-self: center"}
           Au Hasard
   .div.cul{style: "flex:1"}
@@ -13,12 +13,4 @@
           Chronologique
 
 
-.btn.btn-primary.btn-cool
-  =link_to "Party Shuffle", :action => "index"
-
-.div{style: "display:flex; flex-direction: column; padding: 80px;"}
-  - @emissions.each do |emission|
-    =link_to emission.link do
-      .div{style: "padding: 20px; border-bottom: 1px solid #dee3e6"}
-        .h4=emission.title
-        .p=emission.description
+=render "content"

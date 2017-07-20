@@ -9,7 +9,8 @@ namespace :cul do
         doc.css('item').each do |node|
           children = node.children
 
-          Emission.create(
+          e = Emission.find_or_initialize_by(link: children.css('guid').inner_text)
+          e.update(
             :title => children.css('title').inner_text,
             :description => children.css('description').inner_text,
             :link => children.css('guid').inner_text,

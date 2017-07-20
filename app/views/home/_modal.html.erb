@@ -1,0 +1,29 @@
+<!-- Button trigger modal -->
+<!-- <h3 style="Avenir Next Regular; font-size: 1.2em; text-align: right; padding: 10px 20px">
+  <a href="#" data-toggle="modal" data-target="#exampleModal">A Propos</a>
+</h3> -->
+<%= link_to(image_tag("parrot.gif", :alt => "party !", width:'10%', style: "padding-bottom: 17px;"), href="#", {"data-toggle" => "modal", "data-target" => "#partyModal"}) %>
+<!-- Modal -->
+<div class="modal fade" id="partyModal" tabindex="-1" role="dialog" aria-labelledby="partyModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 style="Avenir Next Regular; font-size: 1.2em; text-align: left; padding: 20px">
+          FranceCul.party</h3>
+        <div style="Avenir Next Bold; font-size: 2em; text-align: left; padding: 0px 20px; white-space: pre-line"><%= link_to "LOAD\nMORE CONTENT", :action => "cul_rake" %></div>
+        <p style="Avenir Next Regular; font-size: 0.5em; text-align: left; padding: 20px">(Manual xml_parser ¯\_(ツ)_/¯)</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+    console.log("ehllo")
+  })
+</script>
