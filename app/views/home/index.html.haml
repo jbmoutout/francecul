@@ -14,7 +14,9 @@
     .div{style: "padding-top: 20px"}
       .p{style: "Avenir Next Regular; font-size: 1.2em;"} Tous les jours, une demi-heure de reportage sans commentaire.
       .p{style: "Avenir Next Regular; font-size: 1.2em;"} Par Sonia Kronlund
-
+      .p{style: "font-weight: 800"}
+        =@emissions.count
+        emissions
 
 .div{style: "display:flex; justify-content: center; padding-top: 80px"}
   .btn.btn-cul.active{style: "display:flex; justify-content: center; background-color: #FFF9C4"}
@@ -24,9 +26,12 @@
     .h3{style: "Avenir Next Regular; font-size: 2em; align-self: center"}
       Chronologique
 
-.div{style: "display:flex; flex-direction: column; padding: 80px"}
+.btn.btn-primary.btn-cool
+  =link_to "Party Shuffle", :action => "index"
+
+.div{style: "display:flex; flex-direction: column; padding: 80px;"}
   - @emissions.each do |emission|
     =link_to emission.link do
-      .div{style: "padding: 20px"}
+      .div{style: "padding: 20px; border-bottom: 1px solid #dee3e6"}
         .h4=emission.title
         .p=emission.description

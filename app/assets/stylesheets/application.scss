@@ -35,3 +35,15 @@ a {
 .btn-cul:active, .btn-cul:hover {
   background-color: #FFF9C4;
 }
+
+.btn-cool{
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+  padding: 30px;
+  a {
+    color: #FFF !important;
+    font-size: 2em;
+    text-decoration: none;
+  }
+}
