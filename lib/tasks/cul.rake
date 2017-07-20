@@ -13,7 +13,7 @@ namespace :cul do
           Emission.create(
             :title => children.css('title').inner_text,
             :description => children.css('description').inner_text,
-            :link => children.css('link').inner_text,
+            :link => children.css('guid').inner_text,
             :date => children.css('pubDate').inner_text
           )
         end

@@ -17,7 +17,7 @@
 
 
 .div{style: "display:flex; justify-content: center; padding-top: 80px"}
-  .btn.btn-cul.active{style: "display:flex; justify-content: center"}
+  .btn.btn-cul.active{style: "display:flex; justify-content: center; background-color: #FFF9C4"}
     .h3{style: "Avenir Next Regular; font-size: 2em; align-self: center"}
       Au Hasard
   .btn.btn-cul{style: "display:flex; justify-content: center"}
@@ -26,6 +26,7 @@
 
 .div{style: "display:flex; flex-direction: column; padding: 80px"}
   - @emissions.each do |emission|
-    .div{style: "padding: 20px"}
-      .h4=emission.title
-      .p=emission.description
+    =link_to emission.link do
+      .div{style: "padding: 20px"}
+        .h4=emission.title
+        .p=emission.description
