@@ -36,8 +36,8 @@ gem 'haml'
 gem "haml-rails"
 
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-gem 'jquery-rails'
 
+gem 'nokogiri'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
