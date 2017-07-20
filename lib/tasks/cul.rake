@@ -1,6 +1,5 @@
 require 'rake'
 require 'open-uri'
-require 'Nokogiri'
 
 
 namespace :cul do
