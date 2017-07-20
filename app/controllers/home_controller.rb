@@ -3,5 +3,9 @@ class HomeController < ApplicationController
   def index
     @emissions = Emission.all.shuffle
   end
-  helper_method :reloader
+
+  def chrono
+    @emissions = Emission.all.order('date DESC')
+  end
+
 end

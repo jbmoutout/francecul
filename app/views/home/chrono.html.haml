@@ -3,14 +3,15 @@
 .div{style: "display:flex; justify-content: center; padding-top: 80px"}
   .div.cul{style: "flex:1"}
     =link_to root_path do
-      .btn.btn-cul{style: "display:flex; justify-content: center; background-color: #FFF9C4"}
+      .btn.btn-cul{style: "display:flex; justify-content: center;"}
         .h3{style: "Avenir Next Regular; font-size: 2em; align-self: center"}
           Au Hasard
   .div.cul{style: "flex:1"}
     =link_to chrono_path do
-      .btn.btn-cul{style: "display:flex; justify-content: center;"}
+      .btn.btn-cul{style: "display:flex; justify-content: center; background-color: #FFF9C4"}
         .h3{style: "Avenir Next Regular; font-size: 2em; align-self: center"}
           Chronologique
+
 
 .btn.btn-primary.btn-cool
   =link_to "Party Shuffle", :action => "index"

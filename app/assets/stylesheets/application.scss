@@ -23,8 +23,15 @@ a {
   text-decoration: none;
 }
 
+.cul {
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 .btn-cul {
-  width: 50%;
+  // width: 50%;
   height: 100px;
   font-family: "Avenir Next Bold", sans-serif;
   display: flex;
