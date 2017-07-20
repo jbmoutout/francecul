@@ -26,7 +26,13 @@ a {
 
 a:hover {
   color: inherit;
-  text-decoration: underline wavy;
+  text-decoration: none;
+}
+
+a:hover {
+  .cool_party {
+    text-decoration: underline wavy;
+  }
 }
 
 .cul {
