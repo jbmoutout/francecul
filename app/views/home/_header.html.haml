@@ -18,3 +18,10 @@
       .p{style: "font-weight: 800"}
         =@emissions.count
         emissions
+      .p.mtop2{style: "font-weight: 800; padding-top: 20px"}Dernière:
+      =link_to @last.link do
+        .div{style: "padding: 10px; border-radius: 4px; box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);"}
+          .h4.cool_party{style: "font-family: Avenir Next Bold"}=@last.title
+          .p{style: "font-family: Avenir Next Bold;"}
+            =@last.date.strftime("%d %b. %Y")
+          .p{style: "font-family: Avenir Next Regular; font-weight: 300; font-size: 1.2em"}=@last.description
