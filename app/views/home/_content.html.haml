@@ -10,4 +10,5 @@
             .h4.cool_party{style: "font-family: Avenir Next Bold"}=emission.title
             .p{style: "font-family: Avenir Next Bold;"}
               =emission.date.strftime("%d %b. %Y")
-            .p{style: "font-family: Avenir Next Regular; font-weight: 300; font-size: 1.2em"}=emission.description
+              -# xxx REMOVE TRUNCATE FOR READ MORE
+            .p{style: "font-family: Avenir Next Regular; font-weight: 300; font-size: 1.2em; white-space: pre-line;"}=emission.description.truncate(400)

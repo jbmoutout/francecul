@@ -15,7 +15,8 @@ module TextParser
     def self.sonia_remover
       Emission.all.each do |e|
         clean = e.description.sub(/^[^_]*sonia -/, "")
-        e.description = clean
+        clean = clean.sub(/^(.*?)•/, "")
+        e.description = clean.strip
         e.save
       end
     end

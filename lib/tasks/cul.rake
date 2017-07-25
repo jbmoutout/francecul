@@ -17,5 +17,6 @@ namespace :cul do
             :date => children.css('pubDate').inner_text
           )
         end
+        TextParser.sonia_remover
       end
 end
