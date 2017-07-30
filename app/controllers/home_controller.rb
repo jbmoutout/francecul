@@ -10,6 +10,10 @@ class HomeController < ApplicationController
     @last = @emissions.first
   end
 
+  def sorted
+    @emissions_sorted = Emission.all.order('date DESC')
+  end
+
   def cul_rake
     system ('rake cul:xml_parser')
     redirect_to chrono_path
