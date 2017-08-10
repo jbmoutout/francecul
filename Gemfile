@@ -39,6 +39,8 @@ gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 gem 'nokogiri'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
